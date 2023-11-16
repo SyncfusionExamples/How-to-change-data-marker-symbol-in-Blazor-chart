@@ -1,0 +1,30 @@
+﻿@page "/"
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@ConsumerReports" XName="X" YName="Y" Type="ChartSeriesType.Line">
+            <ChartMarker Visible="true" Height="10" Width="10" Shape="ChartShape.Diamond" />
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public double X { get; set; }
+        public double Y { get; set; }
+    }
+
+    public List<ChartData> ConsumerReports = new List<ChartData>
+    {
+        new ChartData{ X= 20, Y= 28 },
+        new ChartData{ X= 25, Y= 20 },
+        new ChartData{ X= 30, Y= 30 },
+        new ChartData{ X= 35, Y= 27 },
+        new ChartData{ X= 40, Y= 15 },
+        new ChartData{ X= 45, Y= 35 },
+        new ChartData{ X= 50, Y= 30 }
+    };
+}
+
