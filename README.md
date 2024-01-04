@@ -1,16 +1,16 @@
 # How-to-change-data-marker-symbol-in-Blazor-chart.
 
-This article explains how to change data marker symbol in Blazor chart component.
+This article explains how to change data marker symbol in Blazor Chart Component.
 
-**Changing marker symbol in Blazor chart component using Shape property**
+**Changing marker symbol in Blazor chart**
 
 [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) provides data markers to adorn the data points with different shapes and labels. It is enabled by setting [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Visible) Property of [ChartMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMarker.html) to **true**. 
 
-Markers can be assigned with different shapes such as Rectangle, Circle, Diamond etc. using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Shape) property.
+The default shape of data marker in [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) is **Circle**. It can be assigned different shapes such as Rectangle, Circle, Diamond etc., by using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Shape) property. 
 
-The following code illustrates how to use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Shape) property.
+The following code illustrates how to use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Shape) property to change the data marker symbol.
 
-**C#**
+**Index.razor**
 
 ```cshtml
 
@@ -45,7 +45,7 @@ The following code illustrates how to use the [Shape](https://help.syncfusion.co
 
 ```
 
-The following screenshot illustrate the output of the above code snippet.
+The following screenshot illustrates the output of the above code snippet.
 
 **Output:**
 
