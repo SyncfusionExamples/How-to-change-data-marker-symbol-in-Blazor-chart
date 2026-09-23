@@ -1,62 +1,75 @@
-# How-to-change-data-marker-symbol-in-Blazor-chart.
+# How to Change Data Marker Symbols in a Blazor Chart
 
-This article explains how to change data marker symbol in Blazor Chart Component.
+## Overview
 
-**Changing marker symbol in Blazor chart**
+This sample demonstrates how to customize data marker symbols in a Syncfusion [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component. The application displays a line chart bound to a collection of data points and enables chart markers for each point in the series. By configuring the marker shape, the sample replaces the default circular marker with a diamond marker, making it easier to visually distinguish charted values and improve chart readability.
 
-[Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) provides data markers to adorn the data points with different shapes and labels. It is enabled by setting [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Visible) Property of [ChartMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMarker.html) to **true**. 
+The implementation focuses on marker customization that can be applied to chart series when highlighting data points is important for analysis, reporting, or presentation scenarios.
 
-The default shape of data marker in [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) is **Circle**. It can be assigned different shapes such as Rectangle, Circle, Diamond etc., by using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Shape) property. 
+## Key Features
 
-The following code illustrates how to use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Shape) property to change the data marker symbol.
+- Uses the `SfChart` component to render chart data.
+- Configures a `ChartSeries` with `Type="ChartSeriesType.Line"`.
+- Binds data through the `DataSource` property.
+- Maps X and Y values using the `XName` and `YName` properties.
+- Enables markers using `ChartMarker Visible="true"`.
+- Customizes marker dimensions with the `Height` and `Width` properties.
+- Changes the marker symbol using `Shape="ChartShape.Diamond"`.
+- Demonstrates binding a collection of `ChartData` objects to the chart.
 
-**Index.razor**
+## Prerequisites
 
-```cshtml
+- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) or [Visual Studio Code](https://code.visualstudio.com/)
+- [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet) compatible with the project's target framework
 
-@using Syncfusion.Blazor.Charts
+## How to Run the Project
 
-<SfChart>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@ConsumerReports" XName="X" YName="Y" Type="ChartSeriesType.Line">
-            <ChartMarker Visible="true" Height="10" Width="10" Shape="ChartShape.Diamond"/>
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
+**Visual Studio 2022**
 
-@code {
-    public class ChartData
-    {
-        public double X { get; set; }
-        public double Y { get; set; }
-    }
+1. Clone or download the repository.
+2. Open the verified project file:
 
-    public List<ChartData> ConsumerReports = new List<ChartData>
-    {
-        new ChartData{ X= 20, Y= 28 },
-        new ChartData{ X= 25, Y= 20 },
-        new ChartData{ X= 30, Y= 30 },
-        new ChartData{ X= 35, Y= 27 },
-        new ChartData{ X= 40, Y= 15 },
-        new ChartData{ X= 45, Y= 35 },
-        new ChartData{ X= 50, Y= 30 }
-    };
-}
+   `MarkerSymbol/MarkerSymbol.csproj`
 
+3. Restore NuGet packages.
+4. Build the project.
+5. Run the application using `Ctrl+F5`.
+
+**Visual Studio Code**
+
+1. Clone or download the repository.
+2. Open the repository folder in Visual Studio Code.
+3. Open the integrated terminal.
+4. Navigate to the project directory.
+
+```bash
+cd MarkerSymbol
 ```
 
-The following screenshot illustrates the output of the above code snippet.
+5. Restore NuGet packages:
 
-**Output:**
+```bash
+dotnet restore
+```
 
-![](/marker.png)
+6. Run the application:
 
-**Conclusion**
+```bash
+dotnet run
+```
 
-I hope you enjoyed learning how to change data marker symbol in Blazor Chart Component.
+7. Open the local URL displayed in the console output.
 
-You can refer to our [Blazor Chart feature tour](https://www.syncfusion.com/blazor-components/blazor-charts) page to know about its other groundbreaking feature representations and [documentation](https://blazor.syncfusion.com/documentation/chart/getting-started), and how to quickly get started for configuration specifications. You can also explore our [Blazor Chart example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to understand how to create and manipulate data.
+## Project Structure
 
-For current customers, you can check out our components from the [License and Downloads](https://www.syncfusion.com/sales/teamlicense) page. If you are new to Syncfusion, you can try our 30-day [free trial](https://www.syncfusion.com/downloads/blazor) to check out our other controls.
+`Pages/Index.razor` - Hosts the Syncfusion chart sample, binds data, enables chart markers, and sets `ChartMarker.Shape` to `ChartShape.Diamond`.
 
-If you have any queries or require clarifications, please let us know in the comments section below. You can also contact us through our [support forums](https://www.syncfusion.com/forums), [support portal](https://support.syncfusion.com/create), or [feedback portal](https://www.syncfusion.com/feedback/blazor-components?control=charts). We are always happy to assist you!
+## Support and Feedback
+
+- For general product questions, visit the [Syncfusion Community Forum](https://www.syncfusion.com/forums) or [Syncfusion Support](https://www.syncfusion.com/support).
+- To report an issue specific to this sample, open a GitHub issue in this repository.
+- Official documentation for chart markers and chart customization: https://help.syncfusion.com/chart-sdk/blazor/charts/getting-started
+
+## License
+
+This is a Syncfusion sample project provided to demonstrate product usage. Review the [Syncfusion license terms](https://www.syncfusion.com/sales/pricing?category=ui-components) before using Syncfusion components in your own applications.
